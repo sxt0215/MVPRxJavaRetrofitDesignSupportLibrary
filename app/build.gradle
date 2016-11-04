@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+def supportVersion = "25.0.0"
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "suxiting.com.sxt"
+        minSdkVersion 22
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        //64K 上限限制 去掉
+        multiDexEnabled true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+//    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:appcompat-v7:' + supportVersion
+    compile 'com.android.support:support-v4:' + supportVersion
+    compile 'com.android.support:design:' + supportVersion
+    compile 'com.android.support:recyclerview-v7:' + supportVersion
+    compile 'com.android.support:cardview-v7:' + supportVersion
+    //64K 上限限制 去掉
+    compile 'com.android.support:multidex:1.0.0'
+    //umeng
+    compile 'com.umeng.analytics:analytics:latest.integration'
+
+
+
+}
