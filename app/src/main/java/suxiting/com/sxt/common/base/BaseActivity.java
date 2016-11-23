@@ -5,6 +5,8 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.databinding.DataBindingUtil;
+import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.support.v7.app.AppCompatActivity;
@@ -23,10 +25,15 @@ import suxiting.com.sxt.common.utils.OnClickUtil;
 /**
  * Created by sxt on 16/8/4.
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity <T extends ViewDataBinding>extends AppCompatActivity {
     private final String TAG = getClass().getSimpleName() + "My";
 
     public boolean isActive = true;
+    /**
+     * ViewDataBinding实体
+     * 用于子类调用设置数据或者获得控件
+     */
+    protected T binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +64,15 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     }
 
+    public T getBinding(){
+        return binding;
+    }
+
+    @Override
+    public void setContentView(View view) {
+        super.setContentView(view);
+        binding = DataBindingUtil.bind(view);
+    }
 
     /**
      * Activity的现场保存：
@@ -311,22 +327,22 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * 获取版本号
-     *
-     * @param context
-     * @return
-     */
-    public int getAppVersion() {
-        try {
-            PackageInfo info = getPackageManager().getPackageInfo(
-                    getPackageName(), 0);
-            return info.versionCode;
-        } catch (NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return 1;
-    }
+//    /**
+//     * 获取版本号
+//     *
+//     * @param context
+//     * @return
+//     */
+//    public int getAppVersion() {
+//        try {
+//            PackageInfo info = getPackageManager().getPackageInfo(
+//                    getPackageName(), 0);
+//            return info.versionCode;
+//        } catch (NameNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        return 1;
+//    }
     public final int getVersionCode(Context context)// 获取版本号(内部识别号)
     {
         try {

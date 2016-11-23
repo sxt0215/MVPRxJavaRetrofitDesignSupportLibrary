@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextImageButton">
+        <attr name="ibTextSize" format="reference|dimension"></attr>
+        <attr name="ibText" format="reference|string"></attr>
+        <attr name="ibTextColor" format="reference|color"></attr>
+    </declare-styleable>
+    <declare-styleable name="ViewFlow">
+        <attr name="sidebuffer" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="CircleFlowIndicator">
+        <attr name="activeColor" format="color" />
+        <attr name="inactiveColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="centered" format="boolean" />
+        <attr name="fadeOut" format="integer" />
+        <attr name="inactiveType">
+            <flag name="stroke" value="0" />
+            <flag name="fill" value="1" />
+        </attr>
+        <attr name="activeType">
+            <flag name="stroke" value="0" />
+            <flag name="fill" value="1" />
+        </attr>
+        <attr name="circleSeparation" format="dimension" />
+        <attr name="activeRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="round_progress_bar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="maxCount" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="roundProgressMaxColor" format="color" />
+        <attr name="textMaxColor" format="color"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+    <!--common-->
+    <declare-styleable name="App">
+
+        <!-- View attributes -->
+        <attr name="normal" format="integer" />
+        <attr name="selected" format="integer" />
+        <attr name="unselected" format="integer" />
+        <attr name="gestureColor" format="integer" />
+        <attr name="gestureWidth" format="dimension" />
+        <attr name="gestureMarginHorizontal" format="dimension" />
+        <attr name="percent" format="integer" />
+        <attr name="gestureCode" format="reference" />
+        <attr name="correction" format="integer" />
+        <attr name="normal_0" format="integer" />
+        <attr name="normal_1" format="integer" />
+        <attr name="normal_2" format="integer" />
+        <attr name="normal_3" format="integer" />
+        <attr name="normal_5" format="integer" />
+        <attr name="normal_6" format="integer" />
+        <attr name="normal_7" format="integer" />
+        <attr name="normal_8" format="integer" />
+        <attr name="selected_0" format="integer" />
+        <attr name="selected_1" format="integer" />
+        <attr name="selected_2" format="integer" />
+        <attr name="selected_3" format="integer" />
+        <attr name="selected_5" format="integer" />
+        <attr name="selected_6" format="integer" />
+        <attr name="selected_7" format="integer" />
+        <attr name="selected_8" format="integer" />
+        <attr name="showArrow" format="boolean" />
+    </declare-styleable>
+
+</resources>

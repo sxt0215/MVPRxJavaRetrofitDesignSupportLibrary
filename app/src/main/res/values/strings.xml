@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">My</string>
+
+    <string name="login_title">登录页面</string>
+    <string name="login_user_hintname">输入用户名/手机号</string>
+    <string name="login_user_hintpwd">输入密码</string>
+    <string name="login_img_code">输入图形验证码</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="loginerror">账号密码输入错误次数过多，您的账户被锁定，请联系客服</string>
+    <string name="login">登录</string>
+    <string name="protocol">我同意</string>
+    <string name="register_protocol">航天智慧金服用户服务协议</string>
+    <string name="forgetpwd_mobile">填写手机号</string>
+    <string name="forget_new_pwd">填写新密码</string>
+    <string name="forget_new_pwd_confirm">填写确认密码</string>
 </resources>

@@ -1,12 +1,11 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <!--返回或更多的按钮等图标颜色-->
+        <item name="colorControlNormal">?android:attr/textColorPrimaryInverse</item>
     </style>
 
     <style name="ImageTranslucentTheme" parent="AppTheme">
@@ -18,4 +17,24 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!--常用字体-->
+    <style name="text_14_black7b7b" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_fourteen</item>
+        <item name="android:textColor">@color/black_7b7b7b</item>
+    </style>
+    <style name="edit_text">
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textSize">@dimen/text_fourteen</item>
+        <item name="android:textColorHint">@color/black_7b7b7b</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black_7b7b7b</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">@dimen/margin_10</item>
+    </style>
+
+    <style name="button">
+        <item name="android:layout_marginTop">@dimen/margin_19</item>
+        <item name="android:layout_marginLeft">@dimen/margin_18</item>
+        <item name="android:layout_marginRight">@dimen/margin_18</item>
+    </style>
 </resources>
