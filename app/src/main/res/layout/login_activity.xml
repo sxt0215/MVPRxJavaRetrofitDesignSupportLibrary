@@ -3,7 +3,10 @@
     xmlns:android_custom="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <variable name="user" type="suxiting.com.sxt.common.bean.LoginInfo"/>
+
+        <variable
+            name="user"
+            type="suxiting.com.sxt.common.bean.LoginInfo" />
     </data>
 
     <LinearLayout
@@ -124,12 +127,12 @@
                     android:layout_height="@dimen/margin_48"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_15"
                     android:layout_weight="0.8"
                     android:background="@drawable/btn_image_captcha_selector"
                     android:scaleType="fitXY"
                     android_custom:ibText="获取图形码"
                     android_custom:ibTextColor="@color/white"
-                    android:layout_marginRight="@dimen/margin_15"
                     android_custom:ibTextSize="60sp" />
 
             </LinearLayout>

@@ -1,34 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <!--
-    data 节点的作用就像一个桥梁，搭建了 View 和 Model 之间的通路。
-    -->
     <data>
-
+        <variable
+            name="model"
+            type="suxiting.com.sxt.viewmodel.ViewModelMain"/>
     </data>
-
-    <android.support.v4.widget.DrawerLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/drawer_layout"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?android:colorBackground"
-        android:fitsSystemWindows="true">
-
+        android:background="@color/white"
+        >
         <FrameLayout
-            android:id="@+id/contentLayout"
+            android:id="@+id/main_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
+            android:layout_marginBottom="43dp"
+            android:background="#fff">
         </FrameLayout>
-
-        <android.support.design.widget.NavigationView
-            android:id="@+id/navigation"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:menu="@menu/drawer">
-
-        </android.support.design.widget.NavigationView>
-
-    </android.support.v4.widget.DrawerLayout>
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:background="#33ececec"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:onClick="main_bootom_home"
+                style="@style/main_bottom_rl">
+                <Button
+                    android:id="@+id/bottom_tab_mingdian"
+                    style="@style/main_bottom_WH"
+                    android:onClick="main_bootom_home"
+                    android:background="@{model.mingdianBg}" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/main_bottom_forward"
+                android:onClick="main_bootom_show"
+                style="@style/main_bottom_rl">
+                <Button
+                    android:id="@+id/bottom_tab_show"
+                    style="@style/main_bottom_WH"
+                    android:onClick="main_bootom_show"
+                    android:background="@{model.showBg}" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:onClick="main_bootom_my"
+                style="@style/main_bottom_rl">
+                <Button
+                    android:id="@+id/bottom_tab_mine"
+                    style="@style/main_bottom_WH"
+                    android:onClick="main_bootom_my"
+                    android:background="@{model.mineBg}" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
 </layout>
