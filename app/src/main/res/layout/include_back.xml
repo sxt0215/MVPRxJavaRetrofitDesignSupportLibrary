@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch.Vertical"
+    android:layout_height="@dimen/margin_48"
+    android:background="@color/black_242b39">
+
+    <View
+        android:id="@+id/cutline"
+        style="@style/MatchOne"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_242b39" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/back_width"
+        android:layout_height="match_parent"
+        android:layout_above="@id/cutline"
+        android:layout_alignParentLeft="true"
+        android:clickable="true"
+        android:onClick="back"
+        android:scaleType="centerInside"
+        android:src="@drawable/back_white" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@id/cutline"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxEms="15"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_sixteen" />
+
+    <ImageView
+        android:id="@+id/right"
+        android:layout_width="@dimen/back_width"
+        android:layout_height="match_parent"
+        android:layout_above="@id/cutline"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:onClick="rightIcon"
+        android:scaleType="centerInside"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/right_text"
+        android:layout_width="@dimen/back_width"
+        android:layout_height="match_parent"
+        android:layout_above="@id/cutline"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:text="注册"
+        android:textColor="@color/white"
+        android:onClick="rightIcon"
+        android:scaleType="centerInside"
+        android:visibility="gone" />
+
+</RelativeLayout>

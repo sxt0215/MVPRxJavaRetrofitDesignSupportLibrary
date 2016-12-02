@@ -12,16 +12,16 @@
         android:theme="@style/AppTheme.NoActionBar"
         android:supportsRtl="true">
 
-        <activity
-            android:name="suxiting.com.sxt.mvp.guide.SplashActivity"
-            android:launchMode="singleTask"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <!--<activity-->
+            <!--android:name="suxiting.com.sxt.mvp.guide.SplashActivity"-->
+            <!--android:launchMode="singleTask"-->
+            <!--&gt;-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
 
 
     </application>

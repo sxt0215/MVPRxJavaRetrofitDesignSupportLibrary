@@ -3,7 +3,6 @@ package suxiting.com.sxt.common.network;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
-import suxiting.com.sxt.common.application.MyApplication;
 import suxiting.com.sxt.common.bean.ImageCodeBean;
 import suxiting.com.sxt.common.bean.LoginBean;
 import suxiting.com.sxt.common.utils.RxUtils;

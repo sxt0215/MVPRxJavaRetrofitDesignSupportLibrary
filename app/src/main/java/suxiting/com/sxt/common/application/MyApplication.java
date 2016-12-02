@@ -13,9 +13,12 @@ import suxiting.com.sxt.common.utils.AppConstants;
  */
 public class MyApplication extends MultiDexApplication {
 
+    public static MyApplication myApplication;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        myApplication = this;
         boolean isNight = MySharePreference.getBoolean(this, AppConstants.ISNIGHT,false);
         if(isNight){
             //使用夜间模式
@@ -25,4 +28,6 @@ public class MyApplication extends MultiDexApplication {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
     }
+
+
 }
